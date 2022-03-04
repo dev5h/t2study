@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>time2Study🔥</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/app.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="./lib/easytimer.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hamburger-container">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="title">#t2study</div>
+      <div class="timer_area">00:00:00</div>
+      <section id="ctrl_btns">
+        <button id="play" class="ctrl_play_pause">Play</button>
+        <button
+          id="reset"
+          class="ctrl_reset"
+          onclick="return confirm('Your all records of this session will be reset to starting, You sure?')"
+        >
+          Reset
+        </button>
+      </section>
+    </div>
+
+    <!-- Timeline Area
+    <section class="timeline">
+      <div class="timeline-ttl">Timeline</div>
+      <div class="timeline-texts"></div>
+    </section> -->
+
+    <!--PopUP Box-->
+    <section id="darkypopupbg" class="darkypopupbg">
+      <div id="popup">
+        <div class="pop-ttl">PopUp</div>
+        <div class="pop-body">
+          You already have a session paused in your system. Do you wanna
+          continue the session or start over. Click following buttons to choose
+          your action. <br />
+          <b
+            >Remember, You will never be able to retrive the lost session in
+            your lifetime 🤨
+          </b>
+        </div>
+        <div class="pop-footer">
+          <button id="pop_start_over" class="ctrl_reset">Start Over</button>
+          <button id="pop_resume" class="ctrl_play_pause">Resume</button>
+        </div>
+      </div>
+    </section>
+
+    <audio src="./assets/play.wav" id="play_sfx"></audio>
+    <audio src="./assets/interval.wav" id="interval_sfx"></audio>
+
+    <!--Footer-->
+
+    <section class="footer">
+      Made with ❤️ , by <a href="http://twitter.com/shazin_x">Shazin</a>
+    </section>
+    <!--Scripts-->
+    <script src="./scripts/handleBrowser.js"></script>
+    <script src="./scripts/ui.js"></script>
+    <script src="./scripts/handleTimer.js"></script>
+  </body>
+</html>
